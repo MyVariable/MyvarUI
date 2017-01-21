@@ -7076,9 +7076,9 @@
   },
   "project": {
     "restore": {
-      "projectUniqueName": "C:\\Users\\Admin\\Documents\\GitHub\\MyvarUI\\Src\\Src.csproj",
-      "projectName": "Src",
-      "projectPath": "C:\\Users\\Admin\\Documents\\GitHub\\MyvarUI\\Src\\Src.csproj",
+      "projectUniqueName": "C:\\Users\\Admin\\Documents\\GitHub\\MyvarUI\\Src\\MyVarUI.csproj",
+      "projectName": "MyVarUI",
+      "projectPath": "C:\\Users\\Admin\\Documents\\GitHub\\MyvarUI\\Src\\MyVarUI.csproj",
       "outputPath": "C:\\Users\\Admin\\Documents\\GitHub\\MyvarUI\\Src\\obj\\",
       "outputType": "NETCore",
       "originalTargetFrameworks": [

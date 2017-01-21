@@ -102,7 +102,7 @@ namespace MyvarUI.Window
         public void Draw()
         {
             //clear displayPort
-            displayPort.Clear(Color.Grey);
+            displayPort.Clear(Color.Gray);
 
 
             var mLoc = displayPort.GetMouseLocation();

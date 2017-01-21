@@ -17,3 +17,6 @@ C:\Users\Admin\Documents\GitHub\MyvarUI\Src\bin\Debug\netcoreapp1.1\Libs\Windows
 C:\Users\Admin\Documents\GitHub\MyvarUI\Src\bin\Debug\netcoreapp1.1\Libs\Windows\SDL2_ttf.dll
 C:\Users\Admin\Documents\GitHub\MyvarUI\Src\bin\Debug\netcoreapp1.1\Libs\Windows\zlib1.dll
 C:\Users\Admin\Documents\GitHub\MyvarUI\Src\obj\Debug\netcoreapp1.1\Src.csprojResolveAssemblyReference.cache
+C:\Users\Admin\Documents\GitHub\MyvarUI\Src\bin\Debug\netcoreapp1.1\MyvarUI.deps.json
+C:\Users\Admin\Documents\GitHub\MyvarUI\Src\bin\Debug\netcoreapp1.1\MyvarUI.runtimeconfig.json
+C:\Users\Admin\Documents\GitHub\MyvarUI\Src\bin\Debug\netcoreapp1.1\MyvarUI.runtimeconfig.dev.json
