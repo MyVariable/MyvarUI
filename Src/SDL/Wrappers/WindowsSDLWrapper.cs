@@ -5,8 +5,8 @@ namespace MyvarUI.SDL.Wrappers
 {
     public unsafe class WindowsSDLWrapper
     {
-        public const string _libsdl = "./Libs/Windows/SDL2.dll";
-        public const string _libsdl_ttf = "./Libs/Windows/SDL2_ttf.dll";
+        public const string _libsdl = ".\\Libs\\Windows\\SDL2.dll";
+        public const string _libsdl_ttf = ".\\Libs\\Windows\\SDL2_ttf.dll";
 
         [DllImport(_libsdl)]
         public static extern byte* SDL_GetKeyboardState(ref int numkeys);
