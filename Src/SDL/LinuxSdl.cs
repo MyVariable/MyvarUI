@@ -4,9 +4,9 @@ using System.IO;
 using System.Linq;
 using System.Runtime.InteropServices;
 using System.Text;
-using MyvarUI.SDL.Wrappers;
+using MyVarUI.SDL.Wrappers;
 
-namespace MyvarUI.SDL
+namespace MyVarUI.SDL
 {
     public unsafe class LinuxSdl : ISDL
     {

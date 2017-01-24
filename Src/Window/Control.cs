@@ -1,17 +1,19 @@
-using MyvarUI.Drawing;
-using MyvarUI.Events;
+using MyVarUI.Drawing;
+using MyVarUI.Events;
 
-namespace MyvarUI.Window
+namespace MyVarUI.Window
 {
     public abstract class Control
     {
         public int X { get; set; }
         public int Y { get; set; }
-        public int W { get; set; }
-        public int H { get; set; }
+        public int Width { get; set; }
+        public int Height { get; set; }
 
         public bool Focused { get; set; } = false;
         public bool Hidden { get; set; }
+
+        public Control Parent { get; set; }
 
         public delegate void MouseClickEvent(object sender, MouseEventArgs args);
         public delegate void MouseUpEvent(object sender, MouseEventArgs args);

@@ -1,7 +1,7 @@
 using System;
 using System.Runtime.InteropServices;
 
-namespace MyvarUI.SDL
+namespace MyVarUI.SDL
 {
    
         public enum SDL_Scancode

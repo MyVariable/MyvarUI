@@ -1,4 +1,4 @@
-namespace MyvarUI.Window.Controls
+namespace MyVarUI.Window.Controls
 {
     public class PictureBox
     {

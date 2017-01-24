@@ -1,8 +1,6 @@
-using System;
-using MyvarUI.Drawing;
-using MyvarUI.Events;
+using MyVarUI.Drawing;
 
-namespace MyvarUI.Window.Controls
+namespace MyVarUI.Window.Controls
 {
     public class Button : Control
     {
@@ -14,27 +12,27 @@ namespace MyvarUI.Window.Controls
             X = 10;
             Y = 10;
 
-            W = 75;
-            H = 25;
+            Width = 75;
+            Height = 25;
         }
 
         public override void Draw(Graphics g)
         {
             //draw white box where button should be
-            g.DrawFillRectangle(X, Y, W, H, Color.White);
+            g.DrawFillRectangle(X, Y, Width, Height, Color.White);
 
             //draw text
 
             //calulate text size offset
             var sTxT = g.CalulateTextSize(Text, "", 15);
             
-            g.DrawText(Text, X + (W / 2 - (sTxT.W / 2)),
-             Y + (H / 2 - (sTxT.H / 2)), "", FontSize,
+            g.DrawText(Text, X + (Width / 2 - (sTxT.W / 2)),
+             Y + (Height / 2 - (sTxT.H / 2)), "", FontSize,
               Color.Black);
 
             if (Focused)
             {
-                g.DrawRectangle(X, Y, W - 1, H - 1, Color.Blue);
+                g.DrawRectangle(X, Y, Width - 1, Height - 1, Color.Blue);
             }
         }
     }

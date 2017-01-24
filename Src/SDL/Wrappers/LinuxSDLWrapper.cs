@@ -1,8 +1,7 @@
 using System;
 using System.Runtime.InteropServices;
-using MyvarUI;
 
-namespace MyvarUI.SDL.Wrappers
+namespace MyVarUI.SDL.Wrappers
 {
     public unsafe class LinuxSDLWrapper
     {

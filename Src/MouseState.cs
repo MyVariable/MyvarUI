@@ -1,4 +1,4 @@
-namespace MyvarUI
+namespace MyVarUI
 {
     public enum MouseState
     {

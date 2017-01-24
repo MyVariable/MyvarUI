@@ -1,7 +1,6 @@
-using System;
-using MyvarUI.Drawing;
+using MyVarUI.Drawing;
 
-namespace MyvarUI.Window.Controls
+namespace MyVarUI.Window.Controls
 {
     public class Lable : Control
     {

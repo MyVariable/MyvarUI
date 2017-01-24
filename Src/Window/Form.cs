@@ -1,11 +1,10 @@
 using System.Collections.Generic;
 using System.Runtime.InteropServices;
-using MyvarUI.Drawing;
-using MyvarUI.Events;
-using MyvarUI.SDL;
-using static MyvarUI.SDL.LinuxSdl;
+using MyVarUI.Drawing;
+using MyVarUI.Events;
+using MyVarUI.SDL;
 
-namespace MyvarUI.Window
+namespace MyVarUI.Window
 {
     public class Form
     {
@@ -14,8 +13,8 @@ namespace MyvarUI.Window
 
         public int X { get; set; }
         public int Y { get; set; }
-        public int W { get; set; }
-        public int H { get; set; }
+        public int Width { get; set; }
+        public int Height { get; set; }
 
         public bool Hidden { get; set; } = true;
 
@@ -30,16 +29,15 @@ namespace MyvarUI.Window
             }
         }
 
-
-        public List<Control> Controls { get; set; } = new List<Control>();
+        public ControlContainer Controls { get; private set; }
 
         public Form()
         {
             X = 100;
             Y = 100;
 
-            W = 800;
-            H = 600;
+            Width = 800;
+            Height = 600;
 
             bool isWindows = RuntimeInformation.IsOSPlatform(OSPlatform.Windows);
             bool isLinux = RuntimeInformation.IsOSPlatform(OSPlatform.Linux);
@@ -52,16 +50,22 @@ namespace MyvarUI.Window
             {
                  displayPort = new WindowsSdl();
             }
-
            
             displayPort.Init();
             Graphics = new Graphics(displayPort);
+            Controls = new FormControlsContainer(this, displayPort)
+            {
+                X = 0,
+                Y = 0,
+                Width = Width,
+                Height = Height
+            };
         }
 
         public void Show()
         {
             Hidden = false;
-            displayPort.CreateWindow(Title, X, Y, W, H);
+            displayPort.CreateWindow(Title, X, Y, Width, Height);
 
             displayPort.HookEvents = (x) =>
             {
@@ -104,56 +108,7 @@ namespace MyvarUI.Window
             //clear displayPort
             displayPort.Clear(Color.Gray);
 
-
-            var mLoc = displayPort.GetMouseLocation();
-            var mState = displayPort.GetMouseState();
-
-            bool mouseWasOverControl = false;
-            //draw controls
-            for (int c = 0; c < Controls.Count; c++)
-            {
-                var i = Controls[c];
-                //calualte Keybord events
-
-                //calulate mouse events
-                if (mLoc.X >= i.X && mLoc.X <= i.X + i.W)
-                {
-                    if (mLoc.Y >= i.Y && mLoc.Y <= i.Y + i.H)
-                    {
-                        mouseWasOverControl = true;
-                        if (mState != MouseState.None)
-                        {
-                            foreach (var ctrl in Controls)
-                            {
-                                ctrl.Focused = false;
-                            }
-
-                            i.Focused = true;
-                        }
-
-                        i.FireMouseEvents(new MouseEventArgs() { MouseState = mState, X = mLoc.X, Y = mLoc.Y });
-                    }
-
-                }
-
-
-                if (!i.Hidden)
-                {
-                    //draw our lovley control
-                    i.Draw(Graphics);
-                }
-            }
-
-            if (!mouseWasOverControl)
-            {
-                foreach (var ctrl in Controls)
-                {
-                    if (mState != MouseState.None)
-                    {
-                        ctrl.Focused = false;
-                    }
-                }
-            }
+            Controls.Draw(Graphics);
 
             //swap buffer
             displayPort.SwapBuffer();

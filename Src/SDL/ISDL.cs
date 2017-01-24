@@ -1,7 +1,6 @@
 using System;
-using static MyvarUI.SDL.LinuxSdl;
 
-namespace MyvarUI.SDL
+namespace MyVarUI.SDL
 {
     public interface ISDL
     {

@@ -16,4 +16,3 @@ C:\Users\Admin\Documents\GitHub\MyvarUI\Src\bin\Debug\netcoreapp1.1\MyvarUI.dll
 C:\Users\Admin\Documents\GitHub\MyvarUI\Src\bin\Debug\netcoreapp1.1\MyvarUI.pdb
 C:\Users\Admin\Documents\GitHub\MyvarUI\Src\obj\Debug\netcoreapp1.1\MyvarUI.dll
 C:\Users\Admin\Documents\GitHub\MyvarUI\Src\obj\Debug\netcoreapp1.1\MyvarUI.pdb
-C:\Users\Admin\Documents\GitHub\MyvarUI\Src\obj\Debug\netcoreapp1.1\MyVarUI.csprojResolveAssemblyReference.cache

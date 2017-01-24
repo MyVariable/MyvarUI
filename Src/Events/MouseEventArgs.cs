@@ -1,4 +1,4 @@
-namespace MyvarUI.Events
+namespace MyVarUI.Events
 {
     public class MouseEventArgs : Event
     {
